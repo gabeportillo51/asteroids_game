@@ -3,6 +3,8 @@ from constants import *      # imports variables from constants.py
 from player import *        # imports player class in player.py
 from asteroid import *       # imports the asteroid class in asteroid.py
 from asteroidfield import *   # imports the asteroid field class in asteroidfield.py
+from shots import *          # imports the shot class in shots.py
+
 def main():
 
     pygame.init()
@@ -17,6 +19,7 @@ def main():
     Player.containers = (updatable, drawable)
     Asteroid.containers = (asteroids, updatable, drawable)
     AsteroidField.containers = (updatable)
+    Shot.containers = (updatable, drawable)
 
     player = Player(x = SCREEN_WIDTH / 2, y = SCREEN_HEIGHT / 2)
     asteroid_field = AsteroidField()
